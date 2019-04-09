@@ -74,7 +74,7 @@ let complex = [];
 let angle_selector = [90, 210, 330][Math.floor(Math.random(0, 3))];
 
 function setup() {
-    createCanvas(800, 800);
+    createCanvas(windowWidth, windowHeight);
     background(50);
     smooth();
     //blendMode(ADD);
