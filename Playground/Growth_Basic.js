@@ -1,7 +1,7 @@
 // jshint esversion: 6
 
 class RanLife {
-    constructor(base_angle,speed = 1,stroke = 80, ...options) {
+    constructor(base_angle, speed = 1, stroke = 80, ...options) {
         this.life = 100;
 
         this.location = createVector(1 / 2 * width, 1 / 2 * height);
@@ -21,7 +21,7 @@ class RanLife {
         this.branch_angle_base = int(random(0, 2)) ? 60 : -60;
         this.branch_angle_step = int(random(0, 2)) ? 60 : -60;
 
-        this.stroke_color = (0,0,stroke);
+        this.stroke_color = (0, 0, stroke);
 
 
 
@@ -51,7 +51,7 @@ class RanLife {
 
     update() {
         stroke(this.stroke_color);
-        line(this.location.x, this.location.y, this.location.x + this.growth_direction.x * this.growth_speed *this.growth_base, this.location.y + this.growth_direction.y * this.growth_speed * this.growth_base);
+        line(this.location.x, this.location.y, this.location.x + this.growth_direction.x * this.growth_speed * this.growth_base, this.location.y + this.growth_direction.y * this.growth_speed * this.growth_base);
 
         this.growth_base += 1;
 
@@ -85,8 +85,8 @@ function setup() {
     simple = new RanLife();
 
     let n = 6;
-    for (let i = 0; i < n; i++ ) {
-        complex.push(new RanLife(0 + 120 * i,1,255));
+    for (let i = 0; i < n; i++) {
+        complex.push(new RanLife(0 + 120 * i, 1, 255));
     }
 }
 
